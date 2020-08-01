@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7s15ftgb196-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,11 +29,11 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/imports/rtl/aes_core.v
-  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/imports/rtl/aes_encipher_block.v
-  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/imports/rtl/aes_key_mem.v
-  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/imports/rtl/aes_sbox.v
-  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/imports/rtl/aes.v
+  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/new/aes_core.v
+  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/new/aes_encipher_block.v
+  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/new/aes_key_mem.v
+  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/new/aes_sbox.v
+  C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sources_1/new/aes.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

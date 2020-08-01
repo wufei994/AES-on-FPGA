@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1596288490">
+<GenRun Id="synth_1" LaunchPart="xc7s15ftgb196-1" LaunchTime="1596292290">
   <File Type="PA-TCL" Name="aes.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="aes_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="aes_reports.tcl"/>
@@ -11,42 +11,44 @@
   <File Type="VDS-TIMING-PB" Name="aes_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/rtl/aes_core.v">
+    <File Path="$PSRCDIR/sources_1/new/aes_core.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/rtl/aes_encipher_block.v">
+    <File Path="$PSRCDIR/sources_1/new/aes_encipher_block.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../aes/src/rtl/aes_encipher_block.v"/>
-        <Attr Name="ImportTime" Val="1596011391"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/rtl/aes_key_mem.v">
+    <File Path="$PSRCDIR/sources_1/new/aes_key_mem.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../aes/src/rtl/aes_key_mem.v"/>
-        <Attr Name="ImportTime" Val="1596013427"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/rtl/aes_sbox.v">
+    <File Path="$PSRCDIR/sources_1/new/aes_sbox.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../aes/src/rtl/aes_sbox.v"/>
-        <Attr Name="ImportTime" Val="1596011391"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/rtl/aes.v">
+    <File Path="$PSRCDIR/sources_1/new/aes.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/aes_inv_sbox.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

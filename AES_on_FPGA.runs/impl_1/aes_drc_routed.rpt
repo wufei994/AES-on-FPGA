@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Aug  1 21:30:15 2020
+| Date         : Sat Aug  1 22:33:10 2020
 | Host         : DESKTOP-QAMB18T running 64-bit major release  (build 9200)
 | Command      : report_drc -file aes_drc_routed.rpt -pb aes_drc_routed.pb -rpx aes_drc_routed.rpx
 | Design       : aes
@@ -61,37 +61,37 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO write_data[0] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[0] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#2 Warning
 IOB set reset sharing  
-IO write_data[10] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[10] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#3 Warning
 IOB set reset sharing  
-IO write_data[11] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[11] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#4 Warning
 IOB set reset sharing  
-IO write_data[12] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[12] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#5 Warning
 IOB set reset sharing  
-IO write_data[13] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[13] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#6 Warning
 IOB set reset sharing  
-IO write_data[14] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[14] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#7 Warning
 IOB set reset sharing  
-IO write_data[15] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[15] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#8 Warning
@@ -116,7 +116,7 @@ Related violations: <none>
 
 IOSR-1#12 Warning
 IOB set reset sharing  
-IO write_data[1] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[1] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#13 Warning
@@ -171,7 +171,7 @@ Related violations: <none>
 
 IOSR-1#23 Warning
 IOB set reset sharing  
-IO write_data[2] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[2] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#24 Warning
@@ -186,37 +186,37 @@ Related violations: <none>
 
 IOSR-1#26 Warning
 IOB set reset sharing  
-IO write_data[3] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[3] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#27 Warning
 IOB set reset sharing  
-IO write_data[4] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[4] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#28 Warning
 IOB set reset sharing  
-IO write_data[5] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[5] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#29 Warning
 IOB set reset sharing  
-IO write_data[6] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[6] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#30 Warning
 IOB set reset sharing  
-IO write_data[7] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[7] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#31 Warning
 IOB set reset sharing  
-IO write_data[8] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[8] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#32 Warning
 IOB set reset sharing  
-IO write_data[9] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_0, core/keymem/reset_n_1, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO write_data[9] connects to flops which have these core/enc_block/reset_n_1, core/enc_block/reset_n_0, core/keymem/reset_n_1, core/keymem/reset_n_0, ready_reg__0__0_i_1_n_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 
