@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_core.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_decipher_block.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_encipher_block.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_inv_sbox.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_key_mem.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/imports/rtl/aes_sbox.v" \
+"../../../../AES_on_FPGA.srcs/sim_1/imports/tb/tb_aes_core.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

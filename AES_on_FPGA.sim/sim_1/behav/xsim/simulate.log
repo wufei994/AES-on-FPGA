@@ -1,0 +1,136 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+   -= Testbench for AES started =-
+    ==============================
+
+cycle: 0x0000000000000000
+State of DUT
+------------
+ctrl_reg:   init   = 0xx, next   = 0xx
+config_reg: encdec = 0xx, length = 0xx 
+
+block: 0xxxxxxxxx, 0xxxxxxxxx, 0xxxxxxxxx, 0xxxxxxxxx
+
+*** Toggle reset.
+
+cycle: 0x0000000000000001
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x0 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+ECB 128 bit key tests
+---------------------
+*** TC 1 ECB mode test started.
+cycle: 0x0000000000000081
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x0 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 1 NOT successful.
+Expected: 0x3ad77bb40d7a3660a89ecaf32466ef97
+Got:      0x00000000000000000000000000000000
+
+*** TC 2 ECB mode test started.
+cycle: 0x000000000000016d
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x0 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 2 NOT successful.
+Expected: 0xf5d3d58503b9699de785895a96fdbaaf
+Got:      0x00000000000000000000000000000000
+
+*** TC 3 ECB mode test started.
+cycle: 0x0000000000000259
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x0 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 3 NOT successful.
+Expected: 0x43b1cd7f598ece23881b00e3ed030688
+Got:      0x00000000000000000000000000000000
+
+*** TC 4 ECB mode test started.
+cycle: 0x0000000000000345
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x0 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 4 NOT successful.
+Expected: 0x7b0c785e27e8ad3f8223207104725dd4
+Got:      0x00000000000000000000000000000000
+
+
+ECB 256 bit key tests
+---------------------
+*** TC 16 ECB mode test started.
+cycle: 0x0000000000000431
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x1 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 16 NOT successful.
+Expected: 0xf3eed1bdb5d2a03c064b5a7e3db181f8
+Got:      0x00000000000000000000000000000000
+
+*** TC 17 ECB mode test started.
+cycle: 0x000000000000051d
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x1 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 17 NOT successful.
+Expected: 0x591ccb10d410ed26dc5ba74a31362870
+Got:      0x00000000000000000000000000000000
+
+*** TC 18 ECB mode test started.
+cycle: 0x0000000000000609
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x1 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 18 NOT successful.
+Expected: 0xb6ed21b99ca6f4f9f153e7b1beafed1d
+Got:      0x00000000000000000000000000000000
+
+*** TC 19 ECB mode test started.
+cycle: 0x00000000000006f5
+State of DUT
+------------
+ctrl_reg:   init   = 0x0, next   = 0x0
+config_reg: encdec = 0x0, length = 0x1 
+
+block: 0x00000000, 0x00000000, 0x00000000, 0x00000000
+
+*** ERROR: TC 19 NOT successful.
+Expected: 0x23304b7a39f9f3ff067d8d8f9e24ecc7
+Got:      0x00000000000000000000000000000000
+
+*** 08 tests completed - 08 test cases did not complete successfully.
+
+*** AES simulation done. ***
+$finish called at time : 3780 ns : File "C:/Users/Kevin/Documents/GitHub/AES-on-FPGA/AES_on_FPGA.srcs/sim_1/imports/tb/tb_aes.v" Line 534

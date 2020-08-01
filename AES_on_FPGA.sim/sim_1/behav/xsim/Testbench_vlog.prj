@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../AES_on_FPGA.srcs/sources_1/new" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/AddRoundKey.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/ByteSub.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/DataMap.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/KeyExpander.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/KeyMap.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/KeySelector.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/MixColumn.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/Rijndael.v" \
+"../../../../AES_on_FPGA.srcs/sources_1/new/ShiftRow.v" \
+"../../../../AES_on_FPGA.srcs/sim_1/new/Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
