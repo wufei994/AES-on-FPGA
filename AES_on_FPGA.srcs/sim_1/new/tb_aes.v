@@ -1,56 +1,14 @@
-//======================================================================
-//
-// tb_aes.v
-// --------
-// Testbench for the aes top level wrapper.
-//
-//
-// Author: Joachim Strombergson
-// Copyright (c) 2014, Secworks Sweden AB
-// All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or
-// without modification, are permitted provided that the following
-// conditions are met:
-//
-// 1. Redistributions of source code must retain the above copyright
-//    notice, this list of conditions and the following disclaimer.
-//
-// 2. Redistributions in binary form must reproduce the above copyright
-//    notice, this list of conditions and the following disclaimer in
-//    the documentation and/or other materials provided with the
-//    distribution.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-// FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-// COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-// BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
-// STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
-// ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//======================================================================
-
-
-//------------------------------------------------------------------
 // Test module.
-//------------------------------------------------------------------
+
 module tb_aes();
 
-  //----------------------------------------------------------------
-  // Internal constant and parameter definitions.
-  //----------------------------------------------------------------
+
   parameter DEBUG     = 0;
 
   parameter CLK_HALF_PERIOD = 1;
   parameter CLK_PERIOD      = 2 * CLK_HALF_PERIOD;
 
-  // The DUT address map.
+
   parameter ADDR_NAME0       = 8'h00;
   parameter ADDR_NAME1       = 8'h01;
   parameter ADDR_VERSION     = 8'h02;
@@ -93,9 +51,9 @@ module tb_aes();
   parameter AES_ENCIPHER = 1'b1;
 
 
-  //----------------------------------------------------------------
+  
   // Register and Wire declarations.
-  //----------------------------------------------------------------
+  
   reg [31 : 0]  cycle_ctr;
   reg [31 : 0]  error_ctr;
   reg [31 : 0]  tc_ctr;
@@ -112,9 +70,9 @@ module tb_aes();
   wire [31 : 0] tb_read_data;
 
 
-  //----------------------------------------------------------------
+  
   // Device Under Test.
-  //----------------------------------------------------------------
+  
   aes dut(
            .clk(tb_clk),
            .reset_n(tb_reset_n),
@@ -126,11 +84,9 @@ module tb_aes();
           );
 
 
-  //----------------------------------------------------------------
+  
   // clk_gen
-  //
-  // Always running clock generator process.
-  //----------------------------------------------------------------
+  
   always
     begin : clk_gen
       #CLK_HALF_PERIOD;
@@ -138,12 +94,9 @@ module tb_aes();
     end // clk_gen
 
 
-  //----------------------------------------------------------------
+
   // sys_monitor()
-  //
-  // An always running process that creates a cycle counter and
-  // conditionally displays information about the DUT.
-  //----------------------------------------------------------------
+
   always
     begin : sys_monitor
       cycle_ctr = cycle_ctr + 1;
@@ -157,11 +110,9 @@ module tb_aes();
     end
 
 
-  //----------------------------------------------------------------
+  
   // dump_dut_state()
-  //
-  // Dump the state of the dump when needed.
-  //----------------------------------------------------------------
+
   task dump_dut_state;
     begin
       $display("cycle: 0x%016x", cycle_ctr);
@@ -179,11 +130,9 @@ module tb_aes();
   endtask // dump_dut_state
 
 
-  //----------------------------------------------------------------
+  
   // reset_dut()
-  //
-  // Toggle reset to put the DUT into a well known state.
-  //----------------------------------------------------------------
+  
   task reset_dut;
     begin
       $display("*** Toggle reset.");
@@ -196,11 +145,8 @@ module tb_aes();
   endtask // reset_dut
 
 
-  //----------------------------------------------------------------
   // display_test_results()
-  //
-  // Display the accumulated test results.
-  //----------------------------------------------------------------
+
   task display_test_results;
     begin
       if (error_ctr == 0)
@@ -215,13 +161,8 @@ module tb_aes();
     end
   endtask // display_test_results
 
-
-  //----------------------------------------------------------------
   // init_sim()
-  //
-  // Initialize all counters and testbed functionality as well
-  // as setting the DUT inputs to defined values.
-  //----------------------------------------------------------------
+
   task init_sim;
     begin
       cycle_ctr     = 0;
@@ -239,11 +180,8 @@ module tb_aes();
   endtask // init_sim
 
 
-  //----------------------------------------------------------------
   // write_word()
-  //
-  // Write the given word to the DUT using the DUT interface.
-  //----------------------------------------------------------------
+
   task write_word(input [11 : 0] address,
                   input [31 : 0] word);
     begin
@@ -264,11 +202,9 @@ module tb_aes();
   endtask // write_word
 
 
-  //----------------------------------------------------------------
+
   // write_block()
-  //
-  // Write the given block to the dut.
-  //----------------------------------------------------------------
+
   task write_block(input [127 : 0] block);
     begin
       write_word(ADDR_BLOCK0, block[127  :  96]);
@@ -279,13 +215,9 @@ module tb_aes();
   endtask // write_block
 
 
-  //----------------------------------------------------------------
+
   // read_word()
-  //
-  // Read a data word from the given address in the DUT.
-  // the word read will be available in the global variable
-  // read_data.
-  //----------------------------------------------------------------
+
   task read_word(input [11 : 0]  address);
     begin
       tb_address = address;
@@ -304,11 +236,9 @@ module tb_aes();
   endtask // read_word
 
 
-  //----------------------------------------------------------------
+
   // read_result()
-  //
-  // Read the result block in the dut.
-  //----------------------------------------------------------------
+
   task read_result;
     begin
       read_word(ADDR_RESULT0);
@@ -323,12 +253,9 @@ module tb_aes();
   endtask // read_result
 
 
-  //----------------------------------------------------------------
+
   // init_key()
-  //
-  // init the key in the dut by writing the given key and
-  // key length and then trigger init processing.
-  //----------------------------------------------------------------
+
   task init_key(input [255 : 0] key, input key_length);
     begin
       if (DEBUG)
@@ -362,11 +289,8 @@ module tb_aes();
   endtask // init_key
 
 
-  //----------------------------------------------------------------
   // ecb_mode_single_block_test()
-  //
-  // Perform ECB mode encryption or decryption single block test.
-  //----------------------------------------------------------------
+
   task ecb_mode_single_block_test(input [7 : 0]   tc_number,
                                   input           encdec,
                                   input [255 : 0] key,
@@ -406,11 +330,9 @@ module tb_aes();
   endtask // ecb_mode_single_block_test
 
 
-  //----------------------------------------------------------------
+
   // aes_test()
-  //
-  // Main test task will perform complete NIST test of AES.
-  //----------------------------------------------------------------
+
   task aes_test;
     reg [255 : 0] nist_aes128_key;
     reg [255 : 0] nist_aes256_key;
@@ -509,11 +431,8 @@ module tb_aes();
   endtask // aes_test
 
 
-  //----------------------------------------------------------------
   // main
-  //
-  // The main test functionality.
-  //----------------------------------------------------------------
+
   initial
     begin : main
       $display("   -= Testbench for AES started =-");
@@ -534,7 +453,3 @@ module tb_aes();
       $finish;
     end // main
 endmodule // tb_aes
-
-//======================================================================
-// EOF tb_aes.v
-//======================================================================

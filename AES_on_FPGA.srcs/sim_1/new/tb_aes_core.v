@@ -1,49 +1,11 @@
-//======================================================================
-//
-// tb_aes_core.v
-// -------------
-// Testbench for the AES block cipher core.
-//
-//
-// Author: Joachim Strombergson
-// Copyright (c) 2014, Secworks Sweden AB
-// All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or
-// without modification, are permitted provided that the following
-// conditions are met:
-//
-// 1. Redistributions of source code must retain the above copyright
-//    notice, this list of conditions and the following disclaimer.
-//
-// 2. Redistributions in binary form must reproduce the above copyright
-//    notice, this list of conditions and the following disclaimer in
-//    the documentation and/or other materials provided with the
-//    distribution.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
-// FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
-// COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-// BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
-// STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
-// ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//======================================================================
 
-//------------------------------------------------------------------
 // Test module.
-//------------------------------------------------------------------
+
 module tb_aes_core();
 
-  //----------------------------------------------------------------
+  
   // Internal constant and parameter definitions.
-  //----------------------------------------------------------------
+  
   parameter DEBUG     = 0;
   parameter DUMP_WAIT = 0;
 
@@ -57,9 +19,9 @@ module tb_aes_core();
   parameter AES_ENCIPHER = 1'b1;
 
 
-  //----------------------------------------------------------------
+  
   // Register and Wire declarations.
-  //----------------------------------------------------------------
+  
   reg [31 : 0] cycle_ctr;
   reg [31 : 0] error_ctr;
   reg [31 : 0] tc_ctr;
@@ -77,9 +39,9 @@ module tb_aes_core();
   wire           tb_result_valid;
 
 
-  //----------------------------------------------------------------
+  
   // Device Under Test.
-  //----------------------------------------------------------------
+  
   aes_core dut(
                .clk(tb_clk),
                .reset_n(tb_reset_n),
@@ -97,11 +59,11 @@ module tb_aes_core();
               );
 
 
-  //----------------------------------------------------------------
+  
   // clk_gen
-  //
-  // Always running clock generator process.
-  //----------------------------------------------------------------
+  
+  
+  
   always
     begin : clk_gen
       #CLK_HALF_PERIOD;
@@ -109,12 +71,9 @@ module tb_aes_core();
     end // clk_gen
 
 
-  //----------------------------------------------------------------
+  
   // sys_monitor()
-  //
-  // An always running process that creates a cycle counter and
-  // conditionally displays information about the DUT.
-  //----------------------------------------------------------------
+  
   always
     begin : sys_monitor
       cycle_ctr = cycle_ctr + 1;
@@ -126,11 +85,8 @@ module tb_aes_core();
     end
 
 
-  //----------------------------------------------------------------
   // dump_dut_state()
-  //
-  // Dump the state of the dump when needed.
-  //----------------------------------------------------------------
+
   task dump_dut_state;
     begin
       $display("State of DUT");
@@ -153,11 +109,8 @@ module tb_aes_core();
   endtask // dump_dut_state
 
 
-  //----------------------------------------------------------------
   // dump_keys()
-  //
-  // Dump the keys in the key memory of the dut.
-  //----------------------------------------------------------------
+
   task dump_keys;
     begin
       $display("State of key memory in DUT:");
@@ -181,11 +134,9 @@ module tb_aes_core();
   endtask // dump_keys
 
 
-  //----------------------------------------------------------------
+
   // reset_dut()
-  //
-  // Toggle reset to put the DUT into a well known state.
-  //----------------------------------------------------------------
+
   task reset_dut;
     begin
       $display("*** Toggle reset.");
@@ -196,12 +147,9 @@ module tb_aes_core();
   endtask // reset_dut
 
 
-  //----------------------------------------------------------------
+
   // init_sim()
-  //
-  // Initialize all counters and testbed functionality as well
-  // as setting the DUT inputs to defined values.
-  //----------------------------------------------------------------
+
   task init_sim;
     begin
       cycle_ctr = 0;
@@ -221,11 +169,9 @@ module tb_aes_core();
   endtask // init_sim
 
 
-  //----------------------------------------------------------------
+
   // display_test_result()
-  //
-  // Display the accumulated test results.
-  //----------------------------------------------------------------
+
   task display_test_result;
     begin
       if (error_ctr == 0)
@@ -241,15 +187,9 @@ module tb_aes_core();
   endtask // display_test_result
 
 
-  //----------------------------------------------------------------
+
   // wait_ready()
-  //
-  // Wait for the ready flag in the dut to be set.
-  //
-  // Note: It is the callers responsibility to call the function
-  // when the dut is actively processing and will in fact at some
-  // point set the flag.
-  //----------------------------------------------------------------
+
   task wait_ready;
     begin
       while (!tb_ready)
@@ -264,15 +204,9 @@ module tb_aes_core();
   endtask // wait_ready
 
 
-  //----------------------------------------------------------------
+
   // wait_valid()
-  //
-  // Wait for the result_valid flag in the dut to be set.
-  //
-  // Note: It is the callers responsibility to call the function
-  // when the dut is actively processing a block and will in fact
-  // at some point set the flag.
-  //----------------------------------------------------------------
+
   task wait_valid;
     begin
       while (!tb_result_valid)
@@ -283,11 +217,9 @@ module tb_aes_core();
   endtask // wait_valid
 
 
-  //----------------------------------------------------------------
+
   // ecb_mode_single_block_test()
-  //
-  // Perform ECB mode encryption or decryption single block test.
-  //----------------------------------------------------------------
+
   task ecb_mode_single_block_test(input [7 : 0]   tc_number,
                                   input           encdec,
                                   input [255 : 0] key,
@@ -457,7 +389,3 @@ module tb_aes_core();
       $finish;
     end // aes_core_test
 endmodule // tb_aes_core
-
-//======================================================================
-// EOF tb_aes_core.v
-//======================================================================
